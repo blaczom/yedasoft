@@ -1,0 +1,540 @@
+/*
+    SkyApp Bootstrap Sass Theme
+    Author: Brad Trayersy
+    Vsersion: 0.0.1
+*/
+/* BASE - Base styles, variables, minins, etc */
+/* front colors */
+/* background colors*/
+/* Mixins */
+/* line 1, ../scss/base/_normalize.scss */
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+}
+
+/* line 5, ../scss/base/_normalize.scss */
+.page-header {
+  margin-top: 30px;
+}
+
+/* line 9, ../scss/base/_normalize.scss */
+.no-pad-top {
+  padding-top: 0;
+}
+
+/* line 13, ../scss/base/_normalize.scss */
+.extra-pad {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 18, ../scss/base/_normalize.scss */
+.top-inner {
+  padding: 90px 0 30px 0;
+}
+
+/* line 22, ../scss/base/_normalize.scss */
+.carousel-indicators li {
+  font-size: 5em !important;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: grey !important;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+/* line 35, ../scss/base/_normalize.scss */
+.carousel-indicators .active {
+  font-size: 5em !important;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #ffffff !important;
+  border: 5px solid grey;
+  border-radius: 10px;
+}
+
+/* image service */
+/* line 49, ../scss/base/_normalize.scss */
+.img-sm {
+  width: 200px;
+}
+
+/* line 50, ../scss/base/_normalize.scss */
+.img-lg {
+  width: 200px;
+}
+
+/* line 51, ../scss/base/_normalize.scss */
+.img-xsm {
+  width: 200px;
+}
+
+/* line 52, ../scss/base/_normalize.scss */
+.img-xlg {
+  width: 200px;
+}
+
+/* line 54, ../scss/base/_normalize.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 1, ../scss/base/_base.scss */
+body {
+  font-family: "宋体", "sans-serif";
+  font-size: 15px;
+  line-height: 1.7em;
+  color: black;
+}
+
+/* line 8, ../scss/base/_base.scss */
+a {
+  color: #00aff0;
+}
+
+/* line 12, ../scss/base/_base.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 16, ../scss/base/_base.scss */
+input, textarea, button {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* MODULES - Individual site components */
+/* lists */
+/* line 3, ../scss/modules/_typography.scss */
+.list, .list-feature {
+  margin-bottom: 30px;
+}
+
+/* line 7, ../scss/modules/_typography.scss */
+.list-feature {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+}
+/* line 13, ../scss/modules/_typography.scss */
+.list-feature li {
+  line-height: 3.2em;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 18, ../scss/modules/_typography.scss */
+.list-feature li:last-child {
+  border: 0;
+}
+/* line 22, ../scss/modules/_typography.scss */
+.list-feature span {
+  vertical-align: top;
+  padding-top: 9px;
+  font-size: 120%;
+}
+/* line 27, ../scss/modules/_typography.scss */
+.list-feature i {
+  margin-top: -2px;
+  margin-right: 5px;
+}
+
+/* icon */
+/* line 34, ../scss/modules/_typography.scss */
+.fa-primary {
+  color: #00aff0;
+}
+
+/* line 38, ../scss/modules/_typography.scss */
+.fa-border {
+  border: 1px solid #00aff0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 13px 15px;
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+/* heading */
+/* line 47, ../scss/modules/_typography.scss */
+.heading-primary, .heading-primary-a {
+  color: #00aff0;
+}
+
+/* line 51, ../scss/modules/_typography.scss */
+.heading-primary-a {
+  border-bottom: 5px solid #00aff0;
+}
+
+/* line 56, ../scss/modules/_typography.scss */
+.heading-secondary, .heading-secondary-a {
+  color: #7fba00;
+}
+
+/* line 59, ../scss/modules/_typography.scss */
+.heading-secondary-a {
+  border-bottom: 5px solid #7fba00;
+}
+
+/* line 64, ../scss/modules/_typography.scss */
+.heading-light, .heading-light-a {
+  color: #e4eef2;
+}
+
+/* line 67, ../scss/modules/_typography.scss */
+.heading-light-a {
+  border-bottom: 5px solid #e4eef2;
+}
+
+/* line 72, ../scss/modules/_typography.scss */
+.heading-dark, .heading-dark-a {
+  color: #2b5464;
+}
+
+/* line 75, ../scss/modules/_typography.scss */
+.heading-dark-a {
+  border-bottom: 5px solid #2b5464;
+}
+
+/* emphais text */
+/* line 81, ../scss/modules/_typography.scss */
+.em-primary {
+  color: #00aff0;
+}
+
+/* line 85, ../scss/modules/_typography.scss */
+.em-secondary {
+  color: #7fba00;
+}
+
+/* line 89, ../scss/modules/_typography.scss */
+.em-dark {
+  color: #2b5464;
+}
+
+/* blocks */
+/* line 2, ../scss/modules/_blocks.scss */
+.block, .block-primary, .block-secondary, .block-light, .block-dark {
+  padding: 15px;
+  margin-bottom: 15px;
+}
+/* line 6, ../scss/modules/_blocks.scss */
+.block h3, .block-primary h3, .block-secondary h3, .block-light h3, .block-dark h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 14, ../scss/modules/_blocks.scss */
+.block-primary {
+  background: #00aff0;
+  color: #ffffff;
+}
+
+/* line 18, ../scss/modules/_blocks.scss */
+.block-secondary {
+  background: #7fba00;
+  color: #ffffff;
+}
+
+/* line 22, ../scss/modules/_blocks.scss */
+.block-light {
+  background: #e4eef2;
+  color: #666666;
+}
+
+/* line 26, ../scss/modules/_blocks.scss */
+.block-dark {
+  background: #2b5464;
+  color: #ffffff;
+}
+
+/* line 31, ../scss/modules/_blocks.scss */
+.block-center {
+  text-align: center !important;
+}
+
+/* line 35, ../scss/modules/_blocks.scss */
+.block-image img {
+  width: 100%;
+}
+
+/* line 39, ../scss/modules/_blocks.scss */
+.block-border {
+  border: 1px solid #cccccc;
+}
+
+/* line 44, ../scss/modules/_blocks.scss */
+.block-primary-head h3 {
+  padding: 15px 5px 10px 10px;
+  background: #00aff0;
+  color: #ffffff;
+  margin: 0;
+  font-size: 18px;
+}
+/* line 50, ../scss/modules/_blocks.scss */
+.block-primary-head .block-content {
+  border: 1px solid #00aff0;
+  padding: 10px;
+}
+
+/* line 57, ../scss/modules/_blocks.scss */
+.block-icon h3 {
+  padding: 0;
+  margin: 0;
+}
+/* line 62, ../scss/modules/_blocks.scss */
+.block-icon .icon {
+  float: left;
+  width: 20%;
+  margin-top: 10px;
+}
+/* line 68, ../scss/modules/_blocks.scss */
+.block-icon .icon-content {
+  float: left;
+  width: 70%;
+}
+
+/* Buttons */
+/* line 2, ../scss/modules/_buttons.scss */
+.btn-primary {
+  background: #00aff0;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+/* line 7, ../scss/modules/_buttons.scss */
+.btn-primary:hover {
+  background: #00658a;
+  border: 2px solid white;
+}
+
+/* sections */
+/* line 3, ../scss/modules/_sections.scss */
+section {
+  padding: 30px 0px 0px 0px;
+}
+
+/* line 7, ../scss/modules/_sections.scss */
+.section-showcase {
+  height: 300px;
+  background: url("../img/showcase.png") no-repeat right center;
+}
+/* line 11, ../scss/modules/_sections.scss */
+.section-showcase .showcase-content {
+  padding: 70px 15px;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+/* line 17, ../scss/modules/_sections.scss */
+.section-showcase h1, .section-showcase h2 {
+  color: #00aff0;
+}
+
+/* line 22, ../scss/modules/_sections.scss */
+.section-head-bar {
+  background-color: grey;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  text-align: center;
+  height: 70px;
+  box-shadow: 8px 8px 16px #999999;
+}
+/* line 23, ../scss/modules/_sections.scss */
+.section-head-bar .label {
+  font-size: 30px;
+}
+
+/* line 34, ../scss/modules/_sections.scss */
+.section-primary, .section-primary-a {
+  background: #00aff0;
+  color: #ffffff;
+}
+
+/* line 38, ../scss/modules/_sections.scss */
+.section-secondary {
+  background: #7fba00;
+  color: #ffffff;
+}
+
+/* line 42, ../scss/modules/_sections.scss */
+.section-light {
+  background: #e4eef2;
+  color: #666666;
+}
+
+/* line 46, ../scss/modules/_sections.scss */
+.section-dark {
+  background: #2b5464;
+  color: #ffffff;
+}
+
+/* line 50, ../scss/modules/_sections.scss */
+.section-primary-a {
+  border-top: 5px solid #7fba00;
+}
+
+/* carousel */
+/* line 3, ../scss/modules/_components.scss */
+.carousel {
+  margin-bottom: 20px;
+}
+
+/* line 7, ../scss/modules/_components.scss */
+.carousel img {
+  padding: 3px;
+  border: 1px solid #2b5464;
+}
+
+/* line 12, ../scss/modules/_components.scss */
+.tab-pane {
+  padding: 20px 10px;
+  background: #00aff0;
+  color: #ffffff;
+}
+
+/* line 18, ../scss/modules/_components.scss */
+.tab-primary .nav-tabs > li.active > a, .tab-primary .nav-tabs > li.active > a:hover,
+.tab-primary .nav-tabs > li.active > a:focus {
+  background: #00aff0;
+  color: #ffffff;
+}
+
+/* search box */
+/* line 3, ../scss/modules/_forms.scss */
+.search {
+  width: 100%;
+}
+/* line 6, ../scss/modules/_forms.scss */
+.search h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+/* line 11, ../scss/modules/_forms.scss */
+.search input[type="search"] {
+  border: 0;
+  height: 50px;
+  width: 80%;
+  border: 2px solid #00aff0;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+/* line 21, ../scss/modules/_forms.scss */
+.search button {
+  border: 0;
+  background: none;
+  padding: 0;
+  vertical-align: top;
+  margin-left: -4px;
+}
+
+/* LAYOUTS - Page layout styles */
+/* NavBar */
+/* line 3, ../scss/layouts/_nav.scss */
+.navbar {
+  width: 90%;
+  margin: auto;
+  border-color: #d58512;
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  min-height: 60px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+/* line 12, ../scss/layouts/_nav.scss */
+.navbar a {
+  color: #00aff0;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  padding-bottom: 24px;
+  padding-top: 15px;
+}
+
+/* line 22, ../scss/layouts/_nav.scss */
+.navbar-inverse .navbar-brand:hover {
+  color: #00aff0;
+}
+
+/* line 24, ../scss/layouts/_nav.scss */
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #00aff0;
+}
+
+/* line 2, ../scss/layouts/_header.scss */
+header h1 {
+  font: bold 20px "黑体", "sans-serif";
+  color: #00aff0;
+  word-spacing: -1px;
+  letter-spacing: 1.1em;
+  text-decoration: none;
+}
+/* line 9, ../scss/layouts/_header.scss */
+header h2 {
+  font: bold 30px "黑体", "sans-serif";
+  color: #00aff0;
+  word-spacing: -1px;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+/* Footer */
+/* line 3, ../scss/layouts/_footer.scss */
+.footer-main {
+  background: #2b5464;
+  color: #ffffff;
+  border-top: 5px solid #7fba00;
+  min-height: 200px;
+  padding: 30px 0;
+  z-index: 100;
+}
+/* line 10, ../scss/layouts/_footer.scss */
+.footer-main a {
+  color: #ffffff;
+}
+/* line 13, ../scss/layouts/_footer.scss */
+.footer-main ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, ../scss/layouts/_footer.scss */
+.footer-main li {
+  line-height: 1.5em;
+  list-style: none;
+}
+
+/* blog */
+/* line 2, ../scss/layouts/_blog.scss */
+.blog-post {
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 15px;
+}
+/* line 7, ../scss/layouts/_blog.scss */
+.blog-post h2.page-header {
+  margin-top: 5px;
+}
+
+/* line 12, ../scss/layouts/_blog.scss */
+.blog-featured {
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 17, ../scss/layouts/_blog.scss */
+.post-meta {
+  background: #f3f3f3;
+  paddnig: 10px 10px 5px 10px;
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
