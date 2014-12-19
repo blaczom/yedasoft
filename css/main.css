@@ -89,9 +89,9 @@ h1, h2, h3, h4, h5 {
 
 /* line 1, ../scss/base/_base.scss */
 body {
-  font-family: "宋体", "sans-serif";
+  font-family: "Arial", "sans-serif";
   font-size: 15px;
-  line-height: 1.7em;
+  line-height: 1.2em;
   color: black;
 }
 
@@ -110,6 +110,22 @@ input, textarea, button {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
+}
+
+/* line 20, ../scss/base/_base.scss */
+h1 {
+  font: bold 40px "隶书", "sans-serif";
+  word-spacing: -1px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+
+/* line 26, ../scss/base/_base.scss */
+h2 {
+  font: bold 30px "隶书", "sans-serif";
+  word-spacing: -1px;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 /* MODULES - Individual site components */
@@ -256,22 +272,27 @@ input, textarea, button {
   color: #ffffff;
 }
 
-/* line 31, ../scss/modules/_blocks.scss */
+/* line 32, ../scss/modules/_blocks.scss */
+.block-shadow {
+  box-shadow: 8px 8px 16px #999999;
+}
+
+/* line 36, ../scss/modules/_blocks.scss */
 .block-center {
   text-align: center !important;
 }
 
-/* line 35, ../scss/modules/_blocks.scss */
+/* line 40, ../scss/modules/_blocks.scss */
 .block-image img {
   width: 100%;
 }
 
-/* line 39, ../scss/modules/_blocks.scss */
+/* line 44, ../scss/modules/_blocks.scss */
 .block-border {
   border: 1px solid #cccccc;
 }
 
-/* line 44, ../scss/modules/_blocks.scss */
+/* line 49, ../scss/modules/_blocks.scss */
 .block-primary-head h3 {
   padding: 15px 5px 10px 10px;
   background: #00aff0;
@@ -279,24 +300,24 @@ input, textarea, button {
   margin: 0;
   font-size: 18px;
 }
-/* line 50, ../scss/modules/_blocks.scss */
+/* line 55, ../scss/modules/_blocks.scss */
 .block-primary-head .block-content {
   border: 1px solid #00aff0;
   padding: 10px;
 }
 
-/* line 57, ../scss/modules/_blocks.scss */
+/* line 62, ../scss/modules/_blocks.scss */
 .block-icon h3 {
   padding: 0;
   margin: 0;
 }
-/* line 62, ../scss/modules/_blocks.scss */
+/* line 67, ../scss/modules/_blocks.scss */
 .block-icon .icon {
   float: left;
   width: 20%;
   margin-top: 10px;
 }
-/* line 68, ../scss/modules/_blocks.scss */
+/* line 73, ../scss/modules/_blocks.scss */
 .block-icon .icon-content {
   float: left;
   width: 70%;
@@ -336,9 +357,10 @@ section {
 /* line 17, ../scss/modules/_sections.scss */
 .section-showcase h1, .section-showcase h2 {
   color: #00aff0;
+  text-shadow: 5px 5px 5px #bbbbbb;
 }
 
-/* line 22, ../scss/modules/_sections.scss */
+/* line 23, ../scss/modules/_sections.scss */
 .section-head-bar {
   background-color: grey;
   -moz-border-radius: 40px;
@@ -347,36 +369,36 @@ section {
   height: 70px;
   box-shadow: 8px 8px 16px #999999;
 }
-/* line 23, ../scss/modules/_sections.scss */
+/* line 24, ../scss/modules/_sections.scss */
 .section-head-bar .label {
   font-size: 30px;
 }
 
-/* line 34, ../scss/modules/_sections.scss */
+/* line 35, ../scss/modules/_sections.scss */
 .section-primary, .section-primary-a {
   background: #00aff0;
   color: #ffffff;
 }
 
-/* line 38, ../scss/modules/_sections.scss */
+/* line 39, ../scss/modules/_sections.scss */
 .section-secondary {
   background: #7fba00;
   color: #ffffff;
 }
 
-/* line 42, ../scss/modules/_sections.scss */
+/* line 43, ../scss/modules/_sections.scss */
 .section-light {
   background: #e4eef2;
   color: #666666;
 }
 
-/* line 46, ../scss/modules/_sections.scss */
+/* line 47, ../scss/modules/_sections.scss */
 .section-dark {
   background: #2b5464;
   color: #ffffff;
 }
 
-/* line 50, ../scss/modules/_sections.scss */
+/* line 51, ../scss/modules/_sections.scss */
 .section-primary-a {
   border-top: 5px solid #7fba00;
 }
@@ -472,7 +494,7 @@ section {
 
 /* line 2, ../scss/layouts/_header.scss */
 header h1 {
-  font: bold 20px "黑体", "sans-serif";
+  font: bold 20px "隶书", "sans-serif";
   color: #00aff0;
   word-spacing: -1px;
   letter-spacing: 1.1em;
@@ -480,7 +502,7 @@ header h1 {
 }
 /* line 9, ../scss/layouts/_header.scss */
 header h2 {
-  font: bold 30px "黑体", "sans-serif";
+  font: bold 30px "隶书", "sans-serif";
   color: #00aff0;
   word-spacing: -1px;
   letter-spacing: -1px;

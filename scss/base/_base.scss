@@ -16,3 +16,16 @@ ul,li{
 input, textarea, button{
   @include border-radius(0px);
 }
+
+h1{
+  font: bold 40px $header-font-family;
+  word-spacing:-1px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+h2{
+  font: bold 30px $header-font-family;
+  word-spacing:-1px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}

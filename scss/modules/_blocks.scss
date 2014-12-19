@@ -28,6 +28,11 @@
   @include add-background($dark-color);
 }
 
+.block-shadow
+{
+  box-shadow:8px 8px 16px #999999;
+}
+
 .block-center {
   text-align: center !important;
 }
