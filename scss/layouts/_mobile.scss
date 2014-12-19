@@ -1,4 +1,4 @@
-@media(max-width:768px){
+@media(max-width:500px){
   .search{
     display:inline-block;
     text-align:center;
@@ -17,8 +17,14 @@
       margin-bottom:20px;
       text-align : center;
     }
-    h4{
+  }
 
+  .showcase-content {
+    h1{
+      visibility: hidden;
+    }
+    h2{
+      visibility: hidden;
     }
   }
 }

@@ -7,33 +7,33 @@
 /* front colors */
 /* background colors*/
 /* Mixins */
-/* line 1, ../scss/base/_normalize.scss */
+/* line 1, F:/git/yedasoft/scss/base/_normalize.scss */
 h1, h2, h3, h4, h5 {
   margin-top: 0;
 }
 
-/* line 5, ../scss/base/_normalize.scss */
+/* line 5, F:/git/yedasoft/scss/base/_normalize.scss */
 .page-header {
   margin-top: 30px;
 }
 
-/* line 9, ../scss/base/_normalize.scss */
+/* line 9, F:/git/yedasoft/scss/base/_normalize.scss */
 .no-pad-top {
   padding-top: 0;
 }
 
-/* line 13, ../scss/base/_normalize.scss */
+/* line 13, F:/git/yedasoft/scss/base/_normalize.scss */
 .extra-pad {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-/* line 18, ../scss/base/_normalize.scss */
+/* line 18, F:/git/yedasoft/scss/base/_normalize.scss */
 .top-inner {
   padding: 90px 0 30px 0;
 }
 
-/* line 22, ../scss/base/_normalize.scss */
+/* line 22, F:/git/yedasoft/scss/base/_normalize.scss */
 .carousel-indicators li {
   font-size: 5em !important;
   display: inline-block;
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
   border-radius: 10px;
 }
 
-/* line 35, ../scss/base/_normalize.scss */
+/* line 35, F:/git/yedasoft/scss/base/_normalize.scss */
 .carousel-indicators .active {
   font-size: 5em !important;
   display: inline-block;
@@ -62,32 +62,32 @@ h1, h2, h3, h4, h5 {
 }
 
 /* image service */
-/* line 49, ../scss/base/_normalize.scss */
+/* line 49, F:/git/yedasoft/scss/base/_normalize.scss */
 .img-sm {
   width: 200px;
 }
 
-/* line 50, ../scss/base/_normalize.scss */
+/* line 50, F:/git/yedasoft/scss/base/_normalize.scss */
 .img-lg {
   width: 200px;
 }
 
-/* line 51, ../scss/base/_normalize.scss */
+/* line 51, F:/git/yedasoft/scss/base/_normalize.scss */
 .img-xsm {
   width: 200px;
 }
 
-/* line 52, ../scss/base/_normalize.scss */
+/* line 52, F:/git/yedasoft/scss/base/_normalize.scss */
 .img-xlg {
   width: 200px;
 }
 
-/* line 54, ../scss/base/_normalize.scss */
+/* line 54, F:/git/yedasoft/scss/base/_normalize.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 1, ../scss/base/_base.scss */
+/* line 1, F:/git/yedasoft/scss/base/_base.scss */
 body {
   font-family: "Arial", "sans-serif";
   font-size: 15px;
@@ -95,24 +95,24 @@ body {
   color: black;
 }
 
-/* line 8, ../scss/base/_base.scss */
+/* line 8, F:/git/yedasoft/scss/base/_base.scss */
 a {
   color: #00aff0;
 }
 
-/* line 12, ../scss/base/_base.scss */
+/* line 12, F:/git/yedasoft/scss/base/_base.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 16, ../scss/base/_base.scss */
+/* line 16, F:/git/yedasoft/scss/base/_base.scss */
 input, textarea, button {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
 }
 
-/* line 20, ../scss/base/_base.scss */
+/* line 20, F:/git/yedasoft/scss/base/_base.scss */
 h1 {
   font: bold 40px "隶书", "sans-serif";
   word-spacing: -1px;
@@ -120,7 +120,7 @@ h1 {
   text-decoration: none;
 }
 
-/* line 26, ../scss/base/_base.scss */
+/* line 26, F:/git/yedasoft/scss/base/_base.scss */
 h2 {
   font: bold 30px "隶书", "sans-serif";
   word-spacing: -1px;
@@ -130,45 +130,45 @@ h2 {
 
 /* MODULES - Individual site components */
 /* lists */
-/* line 3, ../scss/modules/_typography.scss */
+/* line 3, F:/git/yedasoft/scss/modules/_typography.scss */
 .list, .list-feature {
   margin-bottom: 30px;
 }
 
-/* line 7, ../scss/modules/_typography.scss */
+/* line 7, F:/git/yedasoft/scss/modules/_typography.scss */
 .list-feature {
   margin: 0;
   padding: 0;
   width: 80%;
 }
-/* line 13, ../scss/modules/_typography.scss */
+/* line 13, F:/git/yedasoft/scss/modules/_typography.scss */
 .list-feature li {
   line-height: 3.2em;
   border-bottom: 1px solid #cccccc;
 }
-/* line 18, ../scss/modules/_typography.scss */
+/* line 18, F:/git/yedasoft/scss/modules/_typography.scss */
 .list-feature li:last-child {
   border: 0;
 }
-/* line 22, ../scss/modules/_typography.scss */
+/* line 22, F:/git/yedasoft/scss/modules/_typography.scss */
 .list-feature span {
   vertical-align: top;
   padding-top: 9px;
   font-size: 120%;
 }
-/* line 27, ../scss/modules/_typography.scss */
+/* line 27, F:/git/yedasoft/scss/modules/_typography.scss */
 .list-feature i {
   margin-top: -2px;
   margin-right: 5px;
 }
 
 /* icon */
-/* line 34, ../scss/modules/_typography.scss */
+/* line 34, F:/git/yedasoft/scss/modules/_typography.scss */
 .fa-primary {
   color: #00aff0;
 }
 
-/* line 38, ../scss/modules/_typography.scss */
+/* line 38, F:/git/yedasoft/scss/modules/_typography.scss */
 .fa-border {
   border: 1px solid #00aff0;
   -moz-border-radius: 5px;
@@ -180,119 +180,119 @@ h2 {
 }
 
 /* heading */
-/* line 47, ../scss/modules/_typography.scss */
+/* line 47, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-primary, .heading-primary-a {
   color: #00aff0;
 }
 
-/* line 51, ../scss/modules/_typography.scss */
+/* line 51, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-primary-a {
   border-bottom: 5px solid #00aff0;
 }
 
-/* line 56, ../scss/modules/_typography.scss */
+/* line 56, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-secondary, .heading-secondary-a {
   color: #7fba00;
 }
 
-/* line 59, ../scss/modules/_typography.scss */
+/* line 59, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-secondary-a {
   border-bottom: 5px solid #7fba00;
 }
 
-/* line 64, ../scss/modules/_typography.scss */
+/* line 64, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-light, .heading-light-a {
   color: #e4eef2;
 }
 
-/* line 67, ../scss/modules/_typography.scss */
+/* line 67, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-light-a {
   border-bottom: 5px solid #e4eef2;
 }
 
-/* line 72, ../scss/modules/_typography.scss */
+/* line 72, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-dark, .heading-dark-a {
   color: #2b5464;
 }
 
-/* line 75, ../scss/modules/_typography.scss */
+/* line 75, F:/git/yedasoft/scss/modules/_typography.scss */
 .heading-dark-a {
   border-bottom: 5px solid #2b5464;
 }
 
 /* emphais text */
-/* line 81, ../scss/modules/_typography.scss */
+/* line 81, F:/git/yedasoft/scss/modules/_typography.scss */
 .em-primary {
   color: #00aff0;
 }
 
-/* line 85, ../scss/modules/_typography.scss */
+/* line 85, F:/git/yedasoft/scss/modules/_typography.scss */
 .em-secondary {
   color: #7fba00;
 }
 
-/* line 89, ../scss/modules/_typography.scss */
+/* line 89, F:/git/yedasoft/scss/modules/_typography.scss */
 .em-dark {
   color: #2b5464;
 }
 
 /* blocks */
-/* line 2, ../scss/modules/_blocks.scss */
+/* line 2, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block, .block-primary, .block-secondary, .block-light, .block-dark {
   padding: 15px;
   margin-bottom: 15px;
 }
-/* line 6, ../scss/modules/_blocks.scss */
+/* line 6, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block h3, .block-primary h3, .block-secondary h3, .block-light h3, .block-dark h3 {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 14, ../scss/modules/_blocks.scss */
+/* line 14, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-primary {
   background: #00aff0;
   color: #ffffff;
 }
 
-/* line 18, ../scss/modules/_blocks.scss */
+/* line 18, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-secondary {
   background: #7fba00;
   color: #ffffff;
 }
 
-/* line 22, ../scss/modules/_blocks.scss */
+/* line 22, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-light {
   background: #e4eef2;
   color: #666666;
 }
 
-/* line 26, ../scss/modules/_blocks.scss */
+/* line 26, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-dark {
   background: #2b5464;
   color: #ffffff;
 }
 
-/* line 32, ../scss/modules/_blocks.scss */
+/* line 32, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-shadow {
   box-shadow: 8px 8px 16px #999999;
 }
 
-/* line 36, ../scss/modules/_blocks.scss */
+/* line 36, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-center {
   text-align: center !important;
 }
 
-/* line 40, ../scss/modules/_blocks.scss */
+/* line 40, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-image img {
   width: 100%;
 }
 
-/* line 44, ../scss/modules/_blocks.scss */
+/* line 44, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-border {
   border: 1px solid #cccccc;
 }
 
-/* line 49, ../scss/modules/_blocks.scss */
+/* line 49, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-primary-head h3 {
   padding: 15px 5px 10px 10px;
   background: #00aff0;
@@ -300,67 +300,67 @@ h2 {
   margin: 0;
   font-size: 18px;
 }
-/* line 55, ../scss/modules/_blocks.scss */
+/* line 55, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-primary-head .block-content {
   border: 1px solid #00aff0;
   padding: 10px;
 }
 
-/* line 62, ../scss/modules/_blocks.scss */
+/* line 62, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-icon h3 {
   padding: 0;
   margin: 0;
 }
-/* line 67, ../scss/modules/_blocks.scss */
+/* line 67, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-icon .icon {
   float: left;
   width: 20%;
   margin-top: 10px;
 }
-/* line 73, ../scss/modules/_blocks.scss */
+/* line 73, F:/git/yedasoft/scss/modules/_blocks.scss */
 .block-icon .icon-content {
   float: left;
   width: 70%;
 }
 
 /* Buttons */
-/* line 2, ../scss/modules/_buttons.scss */
+/* line 2, F:/git/yedasoft/scss/modules/_buttons.scss */
 .btn-primary {
   background: #00aff0;
   color: #ffffff;
   border: 2px solid white;
 }
 
-/* line 7, ../scss/modules/_buttons.scss */
+/* line 7, F:/git/yedasoft/scss/modules/_buttons.scss */
 .btn-primary:hover {
   background: #00658a;
   border: 2px solid white;
 }
 
 /* sections */
-/* line 3, ../scss/modules/_sections.scss */
+/* line 3, F:/git/yedasoft/scss/modules/_sections.scss */
 section {
   padding: 30px 0px 0px 0px;
 }
 
-/* line 7, ../scss/modules/_sections.scss */
+/* line 7, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-showcase {
   height: 300px;
   background: url("../img/showcase.png") no-repeat right center;
 }
-/* line 11, ../scss/modules/_sections.scss */
+/* line 11, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-showcase .showcase-content {
   padding: 70px 15px;
   text-align: center;
   letter-spacing: 0.3em;
 }
-/* line 17, ../scss/modules/_sections.scss */
+/* line 17, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-showcase h1, .section-showcase h2 {
   color: #00aff0;
   text-shadow: 5px 5px 5px #bbbbbb;
 }
 
-/* line 23, ../scss/modules/_sections.scss */
+/* line 23, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-head-bar {
   background-color: grey;
   -moz-border-radius: 40px;
@@ -369,60 +369,60 @@ section {
   height: 70px;
   box-shadow: 8px 8px 16px #999999;
 }
-/* line 24, ../scss/modules/_sections.scss */
+/* line 24, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-head-bar .label {
   font-size: 30px;
 }
 
-/* line 35, ../scss/modules/_sections.scss */
+/* line 35, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-primary, .section-primary-a {
   background: #00aff0;
   color: #ffffff;
 }
 
-/* line 39, ../scss/modules/_sections.scss */
+/* line 39, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-secondary {
   background: #7fba00;
   color: #ffffff;
 }
 
-/* line 43, ../scss/modules/_sections.scss */
+/* line 43, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-light {
   background: #e4eef2;
   color: #666666;
 }
 
-/* line 47, ../scss/modules/_sections.scss */
+/* line 47, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-dark {
   background: #2b5464;
   color: #ffffff;
 }
 
-/* line 51, ../scss/modules/_sections.scss */
+/* line 51, F:/git/yedasoft/scss/modules/_sections.scss */
 .section-primary-a {
   border-top: 5px solid #7fba00;
 }
 
 /* carousel */
-/* line 3, ../scss/modules/_components.scss */
+/* line 3, F:/git/yedasoft/scss/modules/_components.scss */
 .carousel {
   margin-bottom: 20px;
 }
 
-/* line 7, ../scss/modules/_components.scss */
+/* line 7, F:/git/yedasoft/scss/modules/_components.scss */
 .carousel img {
   padding: 3px;
   border: 1px solid #2b5464;
 }
 
-/* line 12, ../scss/modules/_components.scss */
+/* line 12, F:/git/yedasoft/scss/modules/_components.scss */
 .tab-pane {
   padding: 20px 10px;
   background: #00aff0;
   color: #ffffff;
 }
 
-/* line 18, ../scss/modules/_components.scss */
+/* line 18, F:/git/yedasoft/scss/modules/_components.scss */
 .tab-primary .nav-tabs > li.active > a, .tab-primary .nav-tabs > li.active > a:hover,
 .tab-primary .nav-tabs > li.active > a:focus {
   background: #00aff0;
@@ -430,16 +430,16 @@ section {
 }
 
 /* search box */
-/* line 3, ../scss/modules/_forms.scss */
+/* line 3, F:/git/yedasoft/scss/modules/_forms.scss */
 .search {
   width: 100%;
 }
-/* line 6, ../scss/modules/_forms.scss */
+/* line 6, F:/git/yedasoft/scss/modules/_forms.scss */
 .search h3 {
   margin-top: 0;
   padding-top: 0;
 }
-/* line 11, ../scss/modules/_forms.scss */
+/* line 11, F:/git/yedasoft/scss/modules/_forms.scss */
 .search input[type="search"] {
   border: 0;
   height: 50px;
@@ -449,7 +449,7 @@ section {
   padding-left: 10px;
   padding-bottom: 5px;
 }
-/* line 21, ../scss/modules/_forms.scss */
+/* line 21, F:/git/yedasoft/scss/modules/_forms.scss */
 .search button {
   border: 0;
   background: none;
@@ -460,9 +460,9 @@ section {
 
 /* LAYOUTS - Page layout styles */
 /* NavBar */
-/* line 3, ../scss/layouts/_nav.scss */
+/* line 3, F:/git/yedasoft/scss/layouts/_nav.scss */
 .navbar {
-  width: 90%;
+  width: 98%;
   margin: auto;
   border-color: #d58512;
   border-left: 1px solid #e7e7e7;
@@ -471,7 +471,7 @@ section {
   background: #fff;
   margin-bottom: 30px;
 }
-/* line 12, ../scss/layouts/_nav.scss */
+/* line 12, F:/git/yedasoft/scss/layouts/_nav.scss */
 .navbar a {
   color: #00aff0;
   font-size: 20px;
@@ -480,19 +480,19 @@ section {
   padding-top: 15px;
 }
 
-/* line 22, ../scss/layouts/_nav.scss */
+/* line 22, F:/git/yedasoft/scss/layouts/_nav.scss */
 .navbar-inverse .navbar-brand:hover {
   color: #00aff0;
 }
 
-/* line 24, ../scss/layouts/_nav.scss */
+/* line 24, F:/git/yedasoft/scss/layouts/_nav.scss */
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #00aff0;
 }
 
-/* line 2, ../scss/layouts/_header.scss */
+/* line 2, F:/git/yedasoft/scss/layouts/_header.scss */
 header h1 {
   font: bold 20px "隶书", "sans-serif";
   color: #00aff0;
@@ -500,7 +500,7 @@ header h1 {
   letter-spacing: 1.1em;
   text-decoration: none;
 }
-/* line 9, ../scss/layouts/_header.scss */
+/* line 9, F:/git/yedasoft/scss/layouts/_header.scss */
 header h2 {
   font: bold 30px "隶书", "sans-serif";
   color: #00aff0;
@@ -510,7 +510,7 @@ header h2 {
 }
 
 /* Footer */
-/* line 3, ../scss/layouts/_footer.scss */
+/* line 3, F:/git/yedasoft/scss/layouts/_footer.scss */
 .footer-main {
   background: #2b5464;
   color: #ffffff;
@@ -519,44 +519,78 @@ header h2 {
   padding: 30px 0;
   z-index: 100;
 }
-/* line 10, ../scss/layouts/_footer.scss */
+/* line 10, F:/git/yedasoft/scss/layouts/_footer.scss */
 .footer-main a {
   color: #ffffff;
 }
-/* line 13, ../scss/layouts/_footer.scss */
+/* line 13, F:/git/yedasoft/scss/layouts/_footer.scss */
 .footer-main ul {
   margin: 0;
   padding: 0;
 }
-/* line 17, ../scss/layouts/_footer.scss */
+/* line 17, F:/git/yedasoft/scss/layouts/_footer.scss */
 .footer-main li {
   line-height: 1.5em;
   list-style: none;
 }
 
 /* blog */
-/* line 2, ../scss/layouts/_blog.scss */
+/* line 2, F:/git/yedasoft/scss/layouts/_blog.scss */
 .blog-post {
   border-top: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   padding: 15px;
 }
-/* line 7, ../scss/layouts/_blog.scss */
+/* line 7, F:/git/yedasoft/scss/layouts/_blog.scss */
 .blog-post h2.page-header {
   margin-top: 5px;
 }
 
-/* line 12, ../scss/layouts/_blog.scss */
+/* line 12, F:/git/yedasoft/scss/layouts/_blog.scss */
 .blog-featured {
   float: left;
   margin-right: 15px;
 }
 
-/* line 17, ../scss/layouts/_blog.scss */
+/* line 17, F:/git/yedasoft/scss/layouts/_blog.scss */
 .post-meta {
   background: #f3f3f3;
   paddnig: 10px 10px 5px 10px;
   border: 1px solid #cccccc;
   margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  /* line 2, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .search {
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* line 6, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .device {
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+
+  /* line 11, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .device-small {
+    margin-bottom: 20px;
+  }
+
+  /* line 16, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .footer-main ul {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* line 23, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .showcase-content h1 {
+    visibility: hidden;
+  }
+  /* line 26, F:/git/yedasoft/scss/layouts/_mobile.scss */
+  .showcase-content h2 {
+    visibility: hidden;
+  }
 }
