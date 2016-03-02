@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,10 +39,17 @@
 			min-height: 30px;
 			display:inline-block;
 		}
-        .boxsel{
+
+    .boxsel{
 			background: black;
 		}
-		
+
+    #pretty{
+      background-color: red;
+    }
+    #pretty:hover{
+      background-color: orange;
+    }
 	</style>
 </head>
 <body>
@@ -77,13 +84,26 @@
 			</div>			
 		</div>
 	</div>
+  <div style="background:lightgray;padding:10px">
     <input id="iMax" name="iMax" type="number" min='2' max='9' placeholder="2-9" value='4'> </input>
-	<button onclick="clickme()"> new game </button>
-    <button onclick="clickme2()"> check game </button>
-	<p>点击小格格，全黑了你就能赢！</p>
+	  <button onclick="clickme()"> new game </button>
+    <button onclick="checkme()"> check game </button>
+	  <p>点击小格格，全黑了你就能赢！</p>
+    <div style="line-height: 50px;">
+      <div id="pretty" style=" padding:0px 15px;float:left;">
+      <a href ="#" onclick="$('#pandb').toggle($(this).show, $(this).hide)"> 数据库显示 </a>
+      </div> &nbsp;
+    </div>
+  </div>
+  <div id="pandb" style="display: none;background-color:lightgreen;padding:10px 10px;">
+    <textarea id="sqlQuery" cols="40" rows="3"> select * from logRecord </textarea>
+    <button onclick = "queryRecord($('#sqlQuery').val())"  > 运行sql </button><br/>
+    <textarea id = "queryResult" cols="50" rows="8" ></textarea>
+  </div>
 </body>
 <script>
-    var gMatrix=2; 
+    var gMatrix=2;
+    var startTime;
 	function clickme(){
 		//$(".container").toggleClass("boxsel");
         //alert(init(2));
@@ -94,8 +114,9 @@
             gMatrix = x;
             init(gMatrix);
         }
+        startTime = new Date();
 	}
-	function clickme2(){	
+	function checkme(){
         var cacheBlack=""; bFind=false;
         for (i = 1 ; i <= gMatrix; i++ ) {
             for (j = 1 ; j <= gMatrix; j++ ) {
@@ -109,7 +130,7 @@
             if (bFind) break;
         }
         console.log(cacheBlack);
-        if (!bFind) alert("you win!");
+        return(bFind);
 	}
     
     function init(aRow) {
@@ -136,13 +157,62 @@
                 if (j > 1) $("#b"+i+(j-1)).toggleClass("boxsel");  // 大于第1行，填上面的。
                 if (j < gMatrix) $("#b"+i+(j+1)).toggleClass("boxsel");  // 小于最后1行，填下面的。                                
                 // alert(v_id);            
-                clickme2();
-            } );
-        
+                if (!checkme()){
+                  var finishTime = new Date();
+                  var user = window.prompt("你赢了，用了" + ((finishTime - startTime) / 1000) + "秒请输入您的姓名");
+                  if( user){
+                    exeDb(sqlInsert, [finishTime, user, ((finishTime - startTime) / 1000)]);
+                  }
+                }
+            });
         return content;
         
     }
     clickme();
+
+    gdb = window.openDatabase("myLittleGameDb", '1.0', 'test little game database', 200000);
+    sqlCreate = "CREATE TABLE if not exists LOGRECORD(RECTIME DATETIME, " +
+      " NICKNAME NVARCHAR2(20), GAMETIME FLOAT)" ;
+    sqlInsert = "INSERT INTO LOGRECORD VALUES(?, ?, ?) ";
+    function exeDb(aSql, aPara){
+      gdb.transaction(
+        function (tx) {
+            tx.executeSql(aSql, aPara,
+              function(tx,success){},
+              function(tx,err){ console.log(err.message) } );
+        },
+        function (tx, err) {
+          console.log('创建失败', err);
+        }
+      );
+    }
+    exeDb(sqlCreate, []);
+
+    function queryRecord(aSql){
+      console.log(aSql);
+      gdb.transaction(
+        function(tx) {
+          tx.executeSql(aSql, []
+            ,function(tx, aData){ $("#queryResult").val(JSON.stringify(trans2Json(aData))) },
+            function(tx, aErr){ console.log(aErr.message, null) }
+          );
+        }
+      );
+    }
+
+    function trans2Json(aData){      // 将websql的返回数据，转化为数组json记录。
+      var lTempItem = [];
+      for (var i = 0; i < aData.rows.length; i ++ )
+        lTempItem.push(aData.rows.item(i));
+      return lTempItem;
+    };
+    var getDateTime = function(aTime, aOnlyDate){
+      if (!aTime) aTime = new Date();
+      var l_date = new Array(aTime.getFullYear(),aTime.getMonth()<9?'0'+(aTime.getMonth()+1):(aTime.getMonth()+1),aTime.getDate()<10?'0'+aTime.getDate():aTime.getDate());
+      var l_time = new Array(aTime.getHours()<10 ? '0' + aTime.getHours():aTime.getHours(),aTime.getMinutes()<10?'0'+aTime.getMinutes():aTime.getMinutes(),aTime.getSeconds()<10?'0'+aTime.getSeconds():aTime.getSeconds());
+      return( l_date.join('-') + ' ' + l_time.join(':')); // '2014-01-02 09:33:33'
+    };
+
 </script>
 
 
