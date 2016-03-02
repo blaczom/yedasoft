@@ -46,9 +46,11 @@
 
     #pretty{
       background-color: red;
+      cursor: pointer;
     }
     #pretty:hover{
       background-color: orange;
+
     }
 	</style>
 </head>
@@ -89,9 +91,9 @@
 	  <button onclick="clickme()"> new game </button>
     <button onclick="checkme()"> check game </button>
 	  <p>点击小格格，全黑了你就能赢！</p>
-    <div style="line-height: 50px;">
-      <div id="pretty" style=" padding:0px 15px;float:left;">
-      <a href ="#" onclick="$('#pandb').toggle($(this).show, $(this).hide)"> 数据库显示 </a>
+    <div style="line-height: 50px;" >
+      <div id="pretty" style="padding:0px 15px;float:left;" onclick="$('#pandb').toggle($(this).show, $(this).hide)">
+        数据库显示
       </div> &nbsp;
     </div>
   </div>
