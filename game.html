@@ -45,11 +45,11 @@
 		}
 
     #pretty{
-      background-color: red;
+      background-color: orange;
       cursor: pointer;
     }
     #pretty:hover{
-      background-color: orange;
+      background-color: red;
 
     }
 	</style>
@@ -92,15 +92,15 @@
     <button onclick="checkme()"> check game </button>
 	  <p>点击小格格，全黑了你就能赢！</p>
     <div style="line-height: 50px;" >
-      <div id="pretty" style="padding:0px 15px;float:left;" onclick="$('#pandb').toggle($(this).show, $(this).hide)">
+      <div id="pretty" style="padding:0px 15px;width:100px;text-align: center" onclick="$('#pandb').toggle($(this).show, $(this).hide)">
         数据库显示
-      </div> &nbsp;
+      </div>
     </div>
   </div>
   <div id="pandb" style="display: none;background-color:lightgreen;padding:10px 10px;">
     <textarea id="sqlQuery" cols="40" rows="3"> select * from logRecord </textarea>
     <button onclick = "queryRecord($('#sqlQuery').val())"  > 运行sql </button><br/>
-    <textarea id = "queryResult" cols="50" rows="8" ></textarea>
+    <textarea id = "queryResult" cols="80" rows="8" ></textarea>
   </div>
 </body>
 <script>
@@ -115,8 +115,8 @@
         else {
             gMatrix = x;
             init(gMatrix);
+            startTime = new Date();
         }
-        startTime = new Date();
 	}
 	function checkme(){
         var cacheBlack=""; bFind=false;
@@ -161,10 +161,26 @@
                 // alert(v_id);            
                 if (!checkme()){
                   var finishTime = new Date();
-                  var user = window.prompt("你赢了，用了" + ((finishTime - startTime) / 1000) + "秒请输入您的姓名");
-                  if( user){
-                    exeDb(sqlInsert, [finishTime, user, ((finishTime - startTime) / 1000)]);
-                  }
+                  var costTime = ((finishTime - startTime) / 1000);
+                  gdb.transaction(
+                    function(tx) {
+                      tx.executeSql(" select count(*) as count ,sum(gametime>?) as sum from logRecord where BLOCKS=?", [costTime,gMatrix]
+                        ,function(tx, aData){ // ok
+                          var lArray = trans2array(aData);
+                          var pos ;
+                          if (lArray[0].count == 0)
+                            pos = 100;
+                          else
+                            pos =  lArray[0].sum * 100 / lArray[0].count;
+                          var user = window.prompt("你赢了，用了" + costTime + "秒，战胜" + pos.toFixed(2) + "%人，想留下您的大名么？");
+                          if( user){
+                            exeDb(sqlInsert, [getDateTime(finishTime), user, costTime, gMatrix]);
+                          }
+                        },
+                        function(tx, aErr){ console.log(aErr.message, null) }
+                      );
+                    }
+                  );
                 }
             });
         return content;
@@ -174,8 +190,8 @@
 
     gdb = window.openDatabase("myLittleGameDb", '1.0', 'test little game database', 200000);
     sqlCreate = "CREATE TABLE if not exists LOGRECORD(RECTIME DATETIME, " +
-      " NICKNAME NVARCHAR2(20), GAMETIME FLOAT)" ;
-    sqlInsert = "INSERT INTO LOGRECORD VALUES(?, ?, ?) ";
+      " NICKNAME NVARCHAR2(20), GAMETIME FLOAT, BLOCKS INTEGER)" ;
+    sqlInsert = "INSERT INTO LOGRECORD VALUES(?, ?, ?, ?) ";
     function exeDb(aSql, aPara){
       gdb.transaction(
         function (tx) {
@@ -195,20 +211,20 @@
       gdb.transaction(
         function(tx) {
           tx.executeSql(aSql, []
-            ,function(tx, aData){ $("#queryResult").val(JSON.stringify(trans2Json(aData))) },
+            ,function(tx, aData){ $("#queryResult").val(JSON.stringify(trans2array(aData))) },
             function(tx, aErr){ console.log(aErr.message, null) }
           );
         }
       );
     }
 
-    function trans2Json(aData){      // 将websql的返回数据，转化为数组json记录。
+    function trans2array(aData){      // 将websql的返回数据，转化为数组json记录。
       var lTempItem = [];
       for (var i = 0; i < aData.rows.length; i ++ )
         lTempItem.push(aData.rows.item(i));
       return lTempItem;
     };
-    var getDateTime = function(aTime, aOnlyDate){
+    var getDateTime = function(aTime){
       if (!aTime) aTime = new Date();
       var l_date = new Array(aTime.getFullYear(),aTime.getMonth()<9?'0'+(aTime.getMonth()+1):(aTime.getMonth()+1),aTime.getDate()<10?'0'+aTime.getDate():aTime.getDate());
       var l_time = new Array(aTime.getHours()<10 ? '0' + aTime.getHours():aTime.getHours(),aTime.getMinutes()<10?'0'+aTime.getMinutes():aTime.getMinutes(),aTime.getSeconds()<10?'0'+aTime.getSeconds():aTime.getSeconds());
